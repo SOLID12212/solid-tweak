@@ -1,13 +1,11 @@
 <#
 .SYNOPSIS
-    This Script is used as a target for the https://christitus.com/windev alias.
+    This Script is customized for my personal use.
 .DESCRIPTION
-    This Script provides a simple way to start the bleeding edge release of winutil.
+    This Script provides a way to start my customized version of winutil.
 .EXAMPLE
-    irm https://christitus.com/windev | iex
-    OR
-    Run in Admin Powershell >  ./windev.ps1
+    irm https://raw.githubusercontent.com/حسابك/winutil/main/winutil.ps1 | iex
 #>
 
-$latestTag = (Invoke-RestMethod "https://api.github.com/repos/ChrisTitusTech/winutil/tags")[0].name
-Invoke-RestMethod "https://github.com/ChrisTitusTech/winutil/releases/download/$latestTag/winutil.ps1" | Invoke-Expression
+# هذا السطر سيقوم بتحميل ملفك المعدل مباشرة من حسابك
+Invoke-RestMethod "https://raw.githubusercontent.com/حسابك/winutil/main/winutil.ps1" | Invoke-Expression
